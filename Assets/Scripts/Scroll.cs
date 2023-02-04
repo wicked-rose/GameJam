@@ -8,6 +8,7 @@ public class Scroll : MonoBehaviour
     public float speed = 0.5f;
     float distance = 0f; 
     public Material [] bg;
+    public float FirstChange = 20;
     public float BackgroundChangeMultiplier = 1.5f;
     void Start()
     {
@@ -21,7 +22,6 @@ public class Scroll : MonoBehaviour
         //Vector2 offset = new Vector2(Time.time * speed, 0);
         Vector2 offset = new Vector2(0, - Time.time * speed);
         gameObject.GetComponent<Renderer>().material.mainTextureOffset = offset;
-        
 
     }
 
