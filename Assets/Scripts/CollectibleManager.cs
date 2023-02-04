@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class CollectibleManager : MonoBehaviour
 {
-    [SerializeField] private Text collectibles;
+    [SerializeField] private Text Gems;
     [SerializeField] private int collected;
 
     // Start is called before the first frame update
@@ -17,7 +17,7 @@ public class CollectibleManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        collectibles.text = "Donuts " + collected;
+        Gems.text = "Gems " + collected;
     }
 
     public void Collected(int value)

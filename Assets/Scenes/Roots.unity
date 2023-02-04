@@ -327,6 +327,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveTime: 0
   mag: {x: 0, y: 0, z: 0}
+--- !u!114 &1985589868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1985589860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f831d5d343709f43acc488f516c8e99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveTime: 0
+--- !u!114 &1985589869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1985589860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed650cfe981485f4db80b162aacbc268, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2120175095
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -381,6 +406,10 @@ PrefabInstance:
     - target: {fileID: 8999491754383134181, guid: f3c29ad233da6804eb648e9c5e5ebc4c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8999491754383134183, guid: f3c29ad233da6804eb648e9c5e5ebc4c, type: 3}
+      propertyPath: m_Time
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8999491754383134183, guid: f3c29ad233da6804eb648e9c5e5ebc4c, type: 3}
       propertyPath: m_Materials.Array.data[0]
