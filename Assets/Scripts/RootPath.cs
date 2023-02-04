@@ -8,7 +8,7 @@ public class RootPath : MonoBehaviour
     public GameObject Target;
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
