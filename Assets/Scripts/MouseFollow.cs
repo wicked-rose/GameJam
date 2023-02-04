@@ -5,17 +5,27 @@ using UnityEngine;
 //This program is set to the object that you want to have follow the mouse. It just grabs the mouse position and applies it to the x of the transform.
 public class MouseFollow : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public float moveTime;
+    Vector3 mag;
     void Start()
     {
-
+        moveTime = 0f;
+        mag = new Vector3(0, 0, 0);
     }
 
     // Update is called once per frame
     void Update()
     {
-        Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Vector3 pos = new Vector3(mousePosition.x, transform.position.y - 0.05f, transform.position.z);
-        transform.position = pos;
+        if (moveTime > .05f)
+        {
+            Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            mag = new Vector3(mousePos.x, 0, 0);
+            moveTime = 0f;
+        }
+
+        Vector3 move = new Vector3((mag.x), transform.position.y - 0.05f, transform.position.z);
+        transform.position = move;
+
+        moveTime += Time.deltaTime;
     }
 }

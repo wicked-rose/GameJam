@@ -22,6 +22,8 @@ public class Scroll : MonoBehaviour
         Vector2 offset = new Vector2(0, - Time.time * speed);
         gameObject.GetComponent<Renderer>().material.mainTextureOffset = offset;
 
+        
+
        // for(int i = 1; i <= bg.Length; i++)
          //   if (distance > FirstChange && distance <= FirstChange*i*1.5 ) 
            //     changedBackground(i-1);
