@@ -32,6 +32,7 @@ public class Scroll : MonoBehaviour
 
     void changedBackground(int index)
     {
+        //Resources.Load("Assets/scenes/");
         gameObject.GetComponent<Renderer>().material = bg[index];
     }
 }
