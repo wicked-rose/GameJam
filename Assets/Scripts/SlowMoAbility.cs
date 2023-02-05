@@ -6,25 +6,16 @@ public class SlowMoAbility : MonoBehaviour
 {
     public float scale;
    // public float BackgroundChangeMultiplier = 1.5f;
-    public GameObject player;
     public GameObject quad;
     MouseFollow playerScript;
     bool active = false;
     float timeA = 0.0f;
-
-    // Start is called before the first frame update
-
-    void Start()
-    {
-
-    }
-
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "Player")
         {
             gameObject.GetComponent<SpriteRenderer>().enabled = false;
-            Time.timeScale = 0.5f;
+            Time.timeScale = 0.2f;
             Invoke("resetTime", 3);
         }
     }
