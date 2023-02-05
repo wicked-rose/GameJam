@@ -42,8 +42,8 @@ public class Scroll : MonoBehaviour
 
         if (distance > 50 && distance < 70)
         {
-             gameObject.GetComponent<Renderer>().material.SetTexture("_FirstTexture", bg[1]);
-             gameObject.GetComponent<Renderer>().material.SetTexture("_SecondTexture", bg[2]);
+             gameObject.GetComponent<Renderer>().material.SetTexture("_FirstTexture", bg[0]);
+             gameObject.GetComponent<Renderer>().material.SetTexture("_SecondTexture", bg[1]);
              gameObject.GetComponent<Renderer>().material.SetFloat("_FlipFlop", 0);
              prevDist = distance;
         }

@@ -19,6 +19,7 @@ public class MouseFollow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        float msSinceLastFrame = Time.deltaTime;
         if (canMove) {
             if (moveTime > .05f)
             {
@@ -27,7 +28,7 @@ public class MouseFollow : MonoBehaviour
                 moveTime = 0f;
             }
 
-            Vector3 move = new Vector3((mag.x), transform.position.y - (0.025f * scaleY), transform.position.z);
+            Vector3 move = new Vector3(mag.x, transform.position.y - (5.0f * msSinceLastFrame), transform.position.z);
             transform.position = move;
 
             moveTime += Time.deltaTime;

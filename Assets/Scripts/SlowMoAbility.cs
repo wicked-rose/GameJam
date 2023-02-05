@@ -16,44 +16,28 @@ public class SlowMoAbility : MonoBehaviour
 
     void Start()
     {
-        scale = 1.0f;
-        playerScript = player.GetComponent<MouseFollow>();
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (active)
-        {
-            scale = .2f;
-            timeA += Time.deltaTime;
-        }
-
-        if(timeA > 8.0f)
-        {
-            timeA = 0.0f;
-            active = false;
-            scale = 1.0f;
-            StartCoroutine(selfDestruct());
-        }
-
-        playerScript.scaleY = scale;
-        quad.GetComponent<Scroll>().Scale = scale;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "Player")
         {
-            active = true;
             gameObject.GetComponent<SpriteRenderer>().enabled = false;
+            Time.timeScale = 0.5f;
+            Invoke("resetTime", 3);
         }
     }
-
-    IEnumerator selfDestruct()
+    public void resetTime()
     {
-        yield return new WaitForSeconds(1f);
+        Time.timeScale = 1.0f;
+        selfDestruct();
+        return;
+    }
+    public void selfDestruct()
+    {
         Object.Destroy(gameObject);
+        return;
     }
 }
 
