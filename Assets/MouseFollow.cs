@@ -8,6 +8,7 @@ public class MouseFollow : MonoBehaviour
     public float moveTime;
     Vector3 mag;
     public bool canMove = true, star = false;
+    public float speed = 5f;
     void Start()
     {
         moveTime = 0f;
@@ -26,7 +27,7 @@ public class MouseFollow : MonoBehaviour
                 moveTime = 0f;
             }
 
-            Vector3 move = new Vector3(mag.x, transform.position.y - (5.0f * msSinceLastFrame), transform.position.z);
+            Vector3 move = new Vector3(mag.x, transform.position.y - (speed * msSinceLastFrame), transform.position.z);
             transform.position = move;
 
             moveTime += Time.deltaTime;

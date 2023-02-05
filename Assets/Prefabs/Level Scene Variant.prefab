@@ -103,7 +103,10 @@ MonoBehaviour:
   - {fileID: 2800000, guid: 6216c84bd4455db4483123af19afad57, type: 3}
   - {fileID: 2800000, guid: 191276996a9a17b438d2994132ef2470, type: 3}
   - {fileID: 2800000, guid: a5237f7acc451d449a3badc330f7b181, type: 3}
+  - {fileID: 2800000, guid: a8362781bf03eec46abfdee7dbcf81a9, type: 3}
   whenToTransition: 5
   multiplier: 1
   Reverse: 0
   Scale: 1
+  loc: 1
+  mouseSpeed: {fileID: 0}
