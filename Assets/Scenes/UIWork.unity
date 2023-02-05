@@ -340,7 +340,7 @@ MonoBehaviour:
   gemSpriteObjectThing: {fileID: 7544705129166258085, guid: c1cea1b2641654fb3b4546bb50d67809, type: 3}
   stopSpawning: 0
   spawnTime: 0.75
-  spawnDelay: 0.6
+  spawnDelay: 0.75
   target: {fileID: 215320716}
 --- !u!4 &215320716
 Transform:
@@ -777,7 +777,7 @@ MonoBehaviour:
   - {fileID: 3026300309598972927, guid: cb096eac560857140ab353bd555042f5, type: 3}
   stopSpawning: 0
   spawnTime: 4
-  spawnDelay: 1.5
+  spawnDelay: 1
   target: {fileID: 847106398}
 --- !u!1001 &929974866
 PrefabInstance:
