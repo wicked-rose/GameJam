@@ -72,7 +72,7 @@ public class Scroll : MonoBehaviour
             gameObject.GetComponent<Renderer>().material.SetFloat("_FlipFlop", Mathf.SmoothStep(start, end, ratio));
             loc = 2f;
             gameObject.GetComponent<Renderer>().material.SetFloat("_Scale", loc);
-            mouseSpeed.GetComponent<MouseFollow>().speed = 20;
+            mouseSpeed.GetComponent<MouseFollow>().speed = 17.5f;
         }
 
 

@@ -1360,7 +1360,7 @@ MonoBehaviour:
   - {fileID: 4775397736427432797, guid: e6738798da651c24882458caef968086, type: 3}
   stopSpawning: 0
   spawnTime: 3
-  spawnDelay: 4
+  spawnDelay: 3.5
   target: {fileID: 1909930633}
 --- !u!4 &1909930633
 Transform:
