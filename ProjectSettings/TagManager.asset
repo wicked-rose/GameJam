@@ -4,7 +4,9 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - PowerUp
+  - Nutrient
+  - Obstacle
+  - Item
   layers:
   - Default
   - TransparentFX

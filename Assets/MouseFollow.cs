@@ -8,6 +8,7 @@ public class MouseFollow : MonoBehaviour
     public float moveTime;
     public float scaleY;
     Vector3 mag;
+    public bool canMove = true;
     void Start()
     {
         moveTime = 0f;
@@ -18,18 +19,18 @@ public class MouseFollow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (moveTime > .05f)
-        {
-            Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            mag = new Vector3(mousePos.x, 0, 0);
-            moveTime = 0f;
+        if (canMove) {
+            if (moveTime > .05f)
+            {
+                Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                mag = new Vector3(mousePos.x, 0, 0);
+                moveTime = 0f;
+            }
+
+            Vector3 move = new Vector3((mag.x), transform.position.y - (0.025f * scaleY), transform.position.z);
+            transform.position = move;
+
+            moveTime += Time.deltaTime;
         }
-
-        Vector3 move = new Vector3((mag.x), transform.position.y - (0.05f * scaleY), transform.position.z);
-        transform.position = move;
-
-        moveTime += Time.deltaTime;
     }
-
-    
 }

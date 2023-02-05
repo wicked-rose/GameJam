@@ -16,6 +16,7 @@ public class GameSceneManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //StartCoroutine(ExampleCoroutine());
         if (startWithFadeIn)
         {
             StartCoroutine(FadeIn());
@@ -56,5 +57,20 @@ public class GameSceneManager : MonoBehaviour
         Transition.GetComponent<Animator>().SetBool("FadeOut", true);
         yield return new WaitForSeconds(1);
         Transition.GetComponent<Animator>().SetBool("FadeOut", false);
+    }
+
+    IEnumerator ExampleCoroutine()
+    {
+        //Print the time of when the function is first called.
+        Debug.Log("Started Coroutine at timestamp : " + Time.time);
+
+        //yield on a new YieldInstruction that waits for 5 seconds.
+        yield return new WaitForSeconds(10);
+        StartCoroutine(FadeIn());
+        StartCoroutine(FadeOut());
+
+
+        //After we have waited 5 seconds print the time again.
+        Debug.Log("Finished Coroutine at timestamp : " + Time.time);
     }
 }
