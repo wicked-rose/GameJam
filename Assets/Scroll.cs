@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEditor;
-using UnityEditorInternal;
+//using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.UIElements;
@@ -72,7 +72,7 @@ public class Scroll : MonoBehaviour
             gameObject.GetComponent<Renderer>().material.SetFloat("_FlipFlop", Mathf.SmoothStep(start, end, ratio));
             loc = 2f;
             gameObject.GetComponent<Renderer>().material.SetFloat("_Scale", loc);
-            mouseSpeed.GetComponent<MouseFollow>().speed = 20;
+            mouseSpeed.GetComponent<MouseFollow>().speed = 35;
         }
 
 

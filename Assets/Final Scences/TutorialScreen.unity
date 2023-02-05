@@ -1210,11 +1210,15 @@ MonoBehaviour:
   m_text: 'Control root growth with mouse position
 
 
-    Collect gems and mycelium
-    nutrients to keep growing
+    Collect mycelium nutrients
+    to keep growing
 
 
-    Avoid obstacles that will deplete your nutrients'
+    Avoid obstacles that will deplete your nutrients
+
+
+    Collect
+    as many gems as you can!'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c61af22ce4d274eb3a6383a6613662ff, type: 2}
   m_sharedMaterial: {fileID: 7077701165641365841, guid: c61af22ce4d274eb3a6383a6613662ff, type: 2}
@@ -1255,7 +1259,7 @@ MonoBehaviour:
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
-  m_paragraphSpacing: -24.95
+  m_paragraphSpacing: -44.95
   m_charWidthMaxAdj: 0
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
