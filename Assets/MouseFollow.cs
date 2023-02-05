@@ -6,14 +6,12 @@ using UnityEngine;
 public class MouseFollow : MonoBehaviour
 {
     public float moveTime;
-    public float scaleY;
     Vector3 mag;
     public bool canMove = true, star = false;
     void Start()
     {
         moveTime = 0f;
         mag = new Vector3(0, 0, 0);
-        scaleY = 1.0f;
     }
 
     // Update is called once per frame

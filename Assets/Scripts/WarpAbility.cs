@@ -20,6 +20,12 @@ public class WarpAbility : MonoBehaviour
     {
         if (warp)
         {
+            objects = GameObject.FindGameObjectsWithTag("Gem");
+            foreach (GameObject obj in objects)
+            {
+                obj.gameObject.transform.position -= new Vector3(0, .025f, 0);
+            }
+
             objects = GameObject.FindGameObjectsWithTag("Item");
             foreach (GameObject obj in objects)
             {
