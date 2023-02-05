@@ -47,13 +47,21 @@ public class Scroll : MonoBehaviour
              gameObject.GetComponent<Renderer>().material.SetFloat("_FlipFlop", 0);
              prevDist = distance;
         }
-        if(distance > 70)
+        if(distance > 70 && distance < 130)
         {
             start = 0;
             end = 1;
             float ratio = (distance-75) / (75 - prevDist);
+            /*gameObject.GetComponent<Renderer>().material.SetTexture("_FirstTexture", bg[1]);
+            gameObject.GetComponent<Renderer>().material.SetTexture("_SecondTexture", bg[2]);*/
             gameObject.GetComponent<Renderer>().material.SetFloat("_FlipFlop", Mathf.SmoothStep(start, end, ratio));
         }
+        /*if (distance > 130)
+        {
+            float ratio = (distance - 135) / (135 - prevDist);
+            gameObject.GetComponent<Renderer>().material.SetFloat("_FlipFlop", Mathf.SmoothStep(start, end, ratio));
+        }*/
+
 
         if (!Reverse)
         {
