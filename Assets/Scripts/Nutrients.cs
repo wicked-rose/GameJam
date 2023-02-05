@@ -6,28 +6,24 @@ using UnityEngine.UI;
 public class Nutrients : MonoBehaviour
 {
     public int maxHealth = 100;
-    public int currentHealth;
+    public int currentHealth = 0;
     public GameObject HealthBar;
     public bool useHealthBar = true;
-    [HideInInspector] public int index = 0; //for editor uses
+    [HideInInspector] public int index = 0;
 
     public SpriteRenderer sprite;
     private TrailRenderer trail;
     public Material newMaterial;
     public Material ogMaterial;
 
-
-    // Start is called before the first frame update
     void Start()
     {
         trail = GetComponent<TrailRenderer>();
-        //ogMaterial = GetComponent<Material>();
         SetUpHealth();
     }
 
     public void SetUpHealth()
     {
-
         if (HealthBar)
         {
             HealthBar.GetComponent<Image>().type = Image.Type.Filled;
@@ -36,10 +32,9 @@ public class Nutrients : MonoBehaviour
             currentHealth = 0;
             UpdateHealthBar();
         }
-
     }
 
-    public void DecreaseHealth(int value)//This is the function to use if you want to decrease the player's health somewhere
+    public void DecreaseHealth(int value)
     {
         currentHealth -= value;
         if (currentHealth <= 0)
@@ -49,7 +44,7 @@ public class Nutrients : MonoBehaviour
         UpdateHealthBar();
     }
 
-    public void IncreaseHealth(int value)//This is the function to use if you want to increase the player's heath somewhere
+    public void IncreaseHealth(int value)
     {
         currentHealth += value;
         if (currentHealth > maxHealth)
@@ -59,7 +54,7 @@ public class Nutrients : MonoBehaviour
         UpdateHealthBar();
     }
 
-    void UpdateHealthBar()//Updates the health bar according to the new health amounts
+    void UpdateHealthBar()
     {
         Debug.Log(currentHealth);
         if (useHealthBar)
@@ -74,7 +69,6 @@ public class Nutrients : MonoBehaviour
         }
     }
 
-    //This is where we handle the place where the health is dealth with
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Collider2D thisCollision = GetComponent<Collider2D>();
@@ -106,15 +100,14 @@ public class Nutrients : MonoBehaviour
 
             if (collision.gameObject.tag == "Nutrient")
             {
+                IncreaseHealth(10);
                 Destroy(collision.gameObject);
             }
         }
-
     }
 
-    public IEnumerator FlashRed() {
-        //Color trailCol = trail.material.color;
-        Debug.Log("red flash");
+    public IEnumerator FlashRed()
+    {
         sprite.color = Color.red;
         ChangeMaterial();
 
@@ -122,7 +115,6 @@ public class Nutrients : MonoBehaviour
 
         sprite.color = Color.white;
         trail.material = ogMaterial;
-
     }
 
     public void ChangeMaterial()
