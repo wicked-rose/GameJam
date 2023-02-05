@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class GemRandomizer : MonoBehaviour
 {
 
-    public GameObject gem;
+    public GameObject gemSpriteObjectThing;
     private GameObject sprite;
     public bool stopSpawning = false;
     public float spawnTime;
@@ -24,15 +25,7 @@ public class GemRandomizer : MonoBehaviour
     {
         cameraOffset = new Vector3(Random.Range(-10.0f, 10.0f), -10.0f, 3.0f);
         target.transform.position = Camera.main.transform.position + cameraOffset;
-        sprite = Instantiate(gem, target.position, Quaternion.identity);
-        StartCoroutine(selfDestruct());
-    }
-
-    IEnumerator selfDestruct()
-    {
-        yield return new WaitForSeconds(5f);
-        //Object.Destroy(gem);
-        Object.DestroyImmediate(gem, true);
+        sprite = Instantiate(gemSpriteObjectThing, target.position, Quaternion.identity);
     }
     
 }
