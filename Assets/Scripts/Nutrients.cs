@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Nutrients : MonoBehaviour
 {
     public int maxHealth = 100;
-    public int currentHealth = 0;
+    private int currentHealth = 100;
     public GameObject HealthBar;
     public bool useHealthBar = true;
     public bool star = false;
@@ -14,13 +14,26 @@ public class Nutrients : MonoBehaviour
 
     public SpriteRenderer sprite;
     private TrailRenderer trail;
-    public Material newMaterial;
+    public Material redMaterial;
+    public Material blueMaterial;
     public Material ogMaterial;
+
+    public GameSceneManager SceneManager;
 
     void Start()
     {
+        currentHealth = 100;
         trail = GetComponent<TrailRenderer>();
+        SceneManager = GetComponent<GameSceneManager>();
         SetUpHealth();
+    }
+
+    private void Update()
+    {
+        if(currentHealth <= 0)
+        {
+            SceneManager.LoadScene(3);
+        }
     }
 
     public void SetUpHealth()
@@ -104,24 +117,46 @@ public class Nutrients : MonoBehaviour
                 IncreaseHealth(10);
                 Destroy(collision.gameObject);
             }
+
+            if (collision.gameObject.tag == "Item" && star == true)
+            {
+                StartCoroutine(FlashBlue());
+            }
         }
     }
 
     public IEnumerator FlashRed()
     {
         sprite.color = Color.red;
-        ChangeMaterial();
+        ChangeRedMaterial();
 
         yield return new WaitForSeconds(0.3f);
 
         sprite.color = Color.white;
-        trail.material = ogMaterial;
+        OGMaterial();
     }
 
-    public void ChangeMaterial()
+    public IEnumerator FlashBlue()
     {
-        trail.material = newMaterial;
+        sprite.color = Color.blue;
+        ChangeBlueMaterial();
+
+        yield return new WaitForSeconds(0.3f);
+
+        sprite.color = Color.white;
+        OGMaterial();
     }
+
+    public void ChangeRedMaterial()
+    {
+        trail.material = redMaterial;
+    }
+
+    public void ChangeBlueMaterial()
+    {
+        trail.material = blueMaterial;
+    }
+
 
     public void OGMaterial()
     {
