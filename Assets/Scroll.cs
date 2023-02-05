@@ -52,14 +52,19 @@ public class Scroll : MonoBehaviour
             start = 0;
             end = 1;
             float ratio = (distance-75) / (75 - prevDist);
-            Debug.Log((TransistionDuration) / (distance- prevDist));
             gameObject.GetComponent<Renderer>().material.SetFloat("_FlipFlop", Mathf.SmoothStep(start, end, ratio));
         }
-        
+
         if (!Reverse)
-            gameObject.GetComponent<Renderer>().material.SetFloat("_Scale", .5f);
+        {
+            gameObject.GetComponent<Renderer>().material.SetFloat("_Scale", Scale);
+            Debug.Log("DONT Reverse!");
+        }
         else
+        {
             gameObject.GetComponent<Renderer>().material.SetFloat("_Scale", -4f);
+            Debug.Log("Reverse!");
+        }
 
 
     }

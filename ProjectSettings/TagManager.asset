@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Nutrient
   - Obstacle
+  - Item
   layers:
   - Default
   - TransparentFX
