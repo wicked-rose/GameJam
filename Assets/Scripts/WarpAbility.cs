@@ -23,7 +23,7 @@ public class WarpAbility : MonoBehaviour
             objects = GameObject.FindGameObjectsWithTag("Item");
             foreach (GameObject obj in objects)
             {
-                obj.gameObject.transform.position -= new Vector3(0, .05f, 0);
+                obj.gameObject.transform.position -= new Vector3(0, .025f, 0);
             }
 
             player.GetComponent<MouseFollow>().canMove = false;
