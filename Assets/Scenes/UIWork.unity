@@ -1292,6 +1292,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6702594516074743147, guid: ff2b22c06cccba94bb43a5636e6ecd13, type: 3}
+      propertyPath: m_TagString
+      value: LSV
+      objectReference: {fileID: 0}
     - target: {fileID: 6702594516074743159, guid: ff2b22c06cccba94bb43a5636e6ecd13, type: 3}
       propertyPath: m_RootOrder
       value: 0

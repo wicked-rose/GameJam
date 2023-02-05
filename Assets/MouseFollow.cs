@@ -8,7 +8,7 @@ public class MouseFollow : MonoBehaviour
     public float moveTime;
     public float scaleY;
     Vector3 mag;
-    public bool canMove = true;
+    public bool canMove = true, star = false;
     void Start()
     {
         moveTime = 0f;

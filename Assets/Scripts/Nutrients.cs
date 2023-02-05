@@ -9,6 +9,7 @@ public class Nutrients : MonoBehaviour
     public int currentHealth = 0;
     public GameObject HealthBar;
     public bool useHealthBar = true;
+    public bool star = false;
     [HideInInspector] public int index = 0;
 
     public SpriteRenderer sprite;
@@ -74,7 +75,7 @@ public class Nutrients : MonoBehaviour
         Collider2D thisCollision = GetComponent<Collider2D>();
         if (collision.otherCollider == thisCollision)
         {
-            if (collision.gameObject.tag == "Obstacle")
+            if (collision.gameObject.tag == "Obstacle" && !star)
             {
                 DecreaseHealth(10);        
             }
@@ -92,7 +93,7 @@ public class Nutrients : MonoBehaviour
         Collider2D thisCollider = GetComponent<Collider2D>();
         if (collision.IsTouching(thisCollider))
         {
-            if (collision.gameObject.tag == "Obstacle")
+            if (collision.gameObject.tag == "Obstacle" && !star)
             {
                 DecreaseHealth(10);
                 StartCoroutine(FlashRed());
