@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class StarAbility : MonoBehaviour
 {
-    // Start is called before the first frame update
+    GameObject player;
     void Start()
     {
         
@@ -21,6 +21,16 @@ public class StarAbility : MonoBehaviour
         if(other.gameObject.tag == "Player")
         {
             other.gameObject.GetComponent<Nutrients>().star = true;
+            gameObject.GetComponent<SpriteRenderer>().enabled = false;
+            player = other.gameObject;
+            StartCoroutine(selfDestruct());
         }
+    }
+
+    IEnumerator selfDestruct()
+    {
+        yield return new WaitForSeconds(7f);
+        player.GetComponent<Nutrients>().star = false;
+        Object.Destroy(gameObject);
     }
 }
