@@ -336,7 +336,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7caf3bb3a6a78e140abe68cfe0ca151d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gem: {fileID: 7544705129166258085, guid: c1cea1b2641654fb3b4546bb50d67809, type: 3}
+  gemSpriteObjectThing: {fileID: 7544705129166258085, guid: c1cea1b2641654fb3b4546bb50d67809, type: 3}
   stopSpawning: 0
   spawnTime: 1
   spawnDelay: 1
@@ -380,11 +380,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.2
   distance: 0
+  Transition: {fileID: 0}
+  TransistionDuration: 3
   bg:
   - {fileID: 2100000, guid: 6bcbd4a20a339e94aa02c343398eff4a, type: 2}
   - {fileID: 2100000, guid: 5e6702e031605af419651b01b622adc0, type: 2}
-  FirstChange: 20
-  BackgroundChangeMultiplier: 1.5
+  whenToTransition: 0.3
+  multiplier: 2
+  Reverse: 0
+  Scale: 1
 --- !u!1 &506964903
 GameObject:
   m_ObjectHideFlags: 0
@@ -1685,6 +1689,10 @@ PrefabInstance:
       propertyPath: newMaterial
       value: 
       objectReference: {fileID: 2100000, guid: cf70fc6d73ab64cbdb2e1414ac9ec85f, type: 2}
+    - target: {fileID: 8063566956483049926, guid: f2a2a9083bdcc4e6391cac4794c491c9, type: 3}
+      propertyPath: canMove
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2a2a9083bdcc4e6391cac4794c491c9, type: 3}
 --- !u!1 &8999491753493532400 stripped

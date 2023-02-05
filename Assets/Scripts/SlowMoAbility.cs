@@ -6,7 +6,6 @@ public class SlowMoAbility : MonoBehaviour
 {
     public float scale;
    // public float BackgroundChangeMultiplier = 1.5f;
-    bool slow = false;
     public GameObject player;
     public GameObject quad;
     MouseFollow playerScript;
