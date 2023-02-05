@@ -4,5 +4,20 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Final Scences/StartScreen.unity
+    guid: 3f6a2206b1ae94eafba47242738ec2d1
+  - enabled: 1
+    path: Assets/Scenes/UIWork.unity
+    guid: bd572e0d22f614aafaac94e92446e7e1
+  - enabled: 1
+    path: Assets/Final Scences/CreditsScreen.unity
+    guid: 2402cc20a737c40a4bf58a1c9a8bc037
+  - enabled: 1
+    path: Assets/Final Scences/GameOver.unity
+    guid: b1534f8cbd5e74cd0bdb028182b55410
+  - enabled: 1
+    path: Assets/Final Scences/TutorialScreen.unity
+    guid: a5c876aee1896488bb10d8c49a2d68f6
   m_configObjects: {}
