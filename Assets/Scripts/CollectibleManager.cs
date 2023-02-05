@@ -17,7 +17,7 @@ public class CollectibleManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Gems.text = "Gems " + collected;
+        Gems.text = collected.ToString();
     }
 
     public void Collected(int value)
