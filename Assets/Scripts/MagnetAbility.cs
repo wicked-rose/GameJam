@@ -20,8 +20,7 @@ public class MagnetAbility : MonoBehaviour
             GameObject[] gems = GameObject.FindGameObjectsWithTag("Gem");
             foreach(GameObject gem in gems)
             {
-                NavMeshAgent agent = gem.GetComponent<NavMeshAgent>();
-                agent.destination = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                gem.transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             }
         }
     }
@@ -38,7 +37,7 @@ public class MagnetAbility : MonoBehaviour
 
     IEnumerator selfDestruct()
     {
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(2f);
         active = false;
         Object.Destroy(gameObject);
     }
