@@ -7,6 +7,9 @@ TagManager:
   - Nutrient
   - Obstacle
   - Item
+  - LSV
+  - Gem
+  - Star
   layers:
   - Default
   - TransparentFX
