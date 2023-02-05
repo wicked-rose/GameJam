@@ -102,6 +102,7 @@ public class Nutrients : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+
         Collider2D thisCollider = GetComponent<Collider2D>();
         if (collision.IsTouching(thisCollider))
         {
@@ -113,6 +114,7 @@ public class Nutrients : MonoBehaviour
 
             if (collision.gameObject.tag == "Nutrient")
             {
+                
                 IncreaseHealth(10);
                 Destroy(collision.gameObject);
             }
