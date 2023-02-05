@@ -42,8 +42,8 @@ public class Scroll : MonoBehaviour
 
         if (distance > 50 && distance < 70)
         {
-             gameObject.GetComponent<Renderer>().material.SetTexture("_FirstTexture", bg[0]);
-             gameObject.GetComponent<Renderer>().material.SetTexture("_SecondTexture", bg[1]);
+             gameObject.GetComponent<Renderer>().material.SetTexture("_FirstTexture", bg[1]);
+             gameObject.GetComponent<Renderer>().material.SetTexture("_SecondTexture", bg[2]);
              gameObject.GetComponent<Renderer>().material.SetFloat("_FlipFlop", 0);
              prevDist = distance;
         }
@@ -52,15 +52,19 @@ public class Scroll : MonoBehaviour
             start = 0;
             end = 1;
             float ratio = (distance-75) / (75 - prevDist);
-            /*gameObject.GetComponent<Renderer>().material.SetTexture("_FirstTexture", bg[1]);
-            gameObject.GetComponent<Renderer>().material.SetTexture("_SecondTexture", bg[2]);*/
             gameObject.GetComponent<Renderer>().material.SetFloat("_FlipFlop", Mathf.SmoothStep(start, end, ratio));
         }
-        /*if (distance > 130)
+        if (distance > 130 && distance < 180)
         {
-            float ratio = (distance - 135) / (135 - prevDist);
+            gameObject.GetComponent<Renderer>().material.SetTexture("_FirstTexture", bg[2]);
+            gameObject.GetComponent<Renderer>().material.SetTexture("_SecondTexture", bg[3]);
+            prevDist = distance;
+        }
+        if(distance > 180)
+        {
+            float ratio = (distance - 185) / (185 - prevDist);
             gameObject.GetComponent<Renderer>().material.SetFloat("_FlipFlop", Mathf.SmoothStep(start, end, ratio));
-        }*/
+        }
 
 
         if (!Reverse)
