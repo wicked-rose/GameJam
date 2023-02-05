@@ -2,10 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PowerUpRandomizer : MonoBehaviour
+public class ObstacleSpawn : MonoBehaviour
 {
-
-    public GameObject[] powerUps;
+    public GameObject[] obstacles;
     private GameObject sprite;
     public bool stopSpawning = false;
     public float spawnTime;
@@ -13,17 +12,17 @@ public class PowerUpRandomizer : MonoBehaviour
     public Transform target;
     private Vector3 cameraOffset;
 
-
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("SpawnGem", spawnTime, spawnDelay);
+        InvokeRepeating("SpawnObstacle", spawnTime, spawnDelay);
     }
-    public void SpawnGem()
+
+    public void SpawnObstacle()
     {
         cameraOffset = new Vector3(Random.Range(-10.0f, 10.0f), -10.0f, 3.0f);
         target.transform.position = Camera.main.transform.position + cameraOffset;
-        sprite = Instantiate(powerUps[Random.Range(0, powerUps.Length)], target.position, Quaternion.identity);
+        sprite = Instantiate(obstacles[Random.Range(0, obstacles.Length)], target.position, Quaternion.identity);
         StartCoroutine(selfDestruct());
     }
 
