@@ -31,7 +31,8 @@ public class GemRandomizer : MonoBehaviour
     IEnumerator selfDestruct()
     {
         yield return new WaitForSeconds(5f);
-        Object.Destroy(gem);
+        //Object.Destroy(gem);
+        Object.DestroyImmediate(gem, true);
     }
     
 }

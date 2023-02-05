@@ -12,9 +12,11 @@ GameObject:
   - component: {fileID: 5735737272781866812}
   - component: {fileID: 5735737272781866813}
   - component: {fileID: 5735737272781866802}
+  - component: {fileID: 3919835140066918814}
+  - component: {fileID: -2779889284212878684}
   m_Layer: 0
   m_Name: Hourglass
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -133,3 +135,30 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 3
+--- !u!114 &3919835140066918814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5735737272781866803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 277652e4bb1d74a54b2b2d6a55e5966e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-2779889284212878684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5735737272781866803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ade0dc9c1503a442a5f8145855dd1fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scale: 0
+  player: {fileID: 1369962339146963914, guid: f2a2a9083bdcc4e6391cac4794c491c9, type: 3}
+  quad: {fileID: 4613915700417172198, guid: 4edf824534d44cb4c819da0d4673fa88, type: 3}

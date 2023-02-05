@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8063566956483049534}
   - component: {fileID: 8063566956483049521}
   - component: {fileID: 8063566956483049926}
-  - component: {fileID: 8063566956483049927}
+  - component: {fileID: 6969322166257728456}
   m_Layer: 0
   m_Name: Root
   m_TagString: Player
@@ -238,7 +238,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveTime: 0
---- !u!114 &8063566956483049927
+  scaleY: 1
+  canMove: 1
+--- !u!114 &6969322166257728456
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -247,6 +249,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1369962339146963914}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed650cfe981485f4db80b162aacbc268, type: 3}
+  m_Script: {fileID: 11500000, guid: 69fcbd9ab27d44a76bf35e0808826392, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 100
+  currentHealth: 0
+  HealthBar: {fileID: 0}
+  useHealthBar: 1
+  index: 0
+  sprite: {fileID: 0}
+  newMaterial: {fileID: 0}
+  ogMaterial: {fileID: 0}
