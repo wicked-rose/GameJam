@@ -30,8 +30,8 @@ public class GemRandomizer : MonoBehaviour
 
     IEnumerator selfDestruct()
     {
-        yield return new WaitForSeconds(0.5f);
-        Object.Destroy(sprite);
+        yield return new WaitForSeconds(5f);
+        Object.Destroy(gem);
     }
     
 }
