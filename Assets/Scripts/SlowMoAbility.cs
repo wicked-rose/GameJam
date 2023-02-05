@@ -15,7 +15,7 @@ public class SlowMoAbility : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             gameObject.GetComponent<SpriteRenderer>().enabled = false;
-            Time.timeScale = 0.2f;
+            Time.timeScale = 0.5f;
             Invoke("resetTime", 3);
         }
     }

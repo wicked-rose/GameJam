@@ -7,11 +7,11 @@ public class WarpAbility : MonoBehaviour
     GameObject[] objects;
     float timeA;
     bool warp = false;
-    public GameObject player;
+    GameObject player;
     public GameObject quad;
     void Start()
     {
-
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     // Update is called once per frame
@@ -22,7 +22,7 @@ public class WarpAbility : MonoBehaviour
             objects = GameObject.FindGameObjectsWithTag("Item");
             foreach (GameObject obj in objects)
             {
-                obj.gameObject.transform.position -= new Vector3(0, .1f, 0);
+                obj.gameObject.transform.position -= new Vector3(0, .05f, 0);
             }
 
             player.GetComponent<MouseFollow>().canMove = false;
