@@ -29,7 +29,7 @@ public class PowerUpRandomizer : MonoBehaviour
 
     IEnumerator selfDestruct()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(5f);
         Object.Destroy(sprite);
     }
 }
