@@ -24,7 +24,7 @@ public class Nutrients : MonoBehaviour
     {
         currentHealth = 100;
         trail = GetComponent<TrailRenderer>();
-        SceneManager = GetComponent<GameSceneManager>();
+        //SceneManager = GetComponent<GameSceneManager>();
         SetUpHealth();
     }
 
@@ -43,7 +43,6 @@ public class Nutrients : MonoBehaviour
             HealthBar.GetComponent<Image>().type = Image.Type.Filled;
             HealthBar.GetComponent<Image>().fillMethod = (int)Image.FillMethod.Horizontal;
             HealthBar.GetComponent<Image>().fillOrigin = (int)Image.OriginHorizontal.Left;
-            currentHealth = 0;
             UpdateHealthBar();
         }
     }

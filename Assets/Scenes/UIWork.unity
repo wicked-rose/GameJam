@@ -339,7 +339,7 @@ MonoBehaviour:
   gemSpriteObjectThing: {fileID: 7544705129166258085, guid: c1cea1b2641654fb3b4546bb50d67809, type: 3}
   stopSpawning: 0
   spawnTime: 1
-  spawnDelay: 1
+  spawnDelay: 0.25
   target: {fileID: 215320716}
 --- !u!4 &215320716
 Transform:
@@ -1697,6 +1697,10 @@ PrefabInstance:
       propertyPath: redMaterial
       value: 
       objectReference: {fileID: 2100000, guid: cf70fc6d73ab64cbdb2e1414ac9ec85f, type: 2}
+    - target: {fileID: 6969322166257728456, guid: f2a2a9083bdcc4e6391cac4794c491c9, type: 3}
+      propertyPath: SceneManager
+      value: 
+      objectReference: {fileID: 1013585683}
     - target: {fileID: 6969322166257728456, guid: f2a2a9083bdcc4e6391cac4794c491c9, type: 3}
       propertyPath: blueMaterial
       value: 
