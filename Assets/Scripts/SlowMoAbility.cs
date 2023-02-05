@@ -8,7 +8,6 @@ public class SlowMoAbility : MonoBehaviour
    // public float BackgroundChangeMultiplier = 1.5f;
     public GameObject quad;
     MouseFollow playerScript;
-    bool active = false;
     float timeA = 0.0f;
     private void OnTriggerEnter2D(Collider2D other)
     {

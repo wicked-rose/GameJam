@@ -8,10 +8,11 @@ public class WarpAbility : MonoBehaviour
     float timeA;
     bool warp = false;
     GameObject player;
-    public GameObject quad;
+    GameObject quad;
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        quad = GameObject.FindGameObjectWithTag("LSV");
     }
 
     // Update is called once per frame

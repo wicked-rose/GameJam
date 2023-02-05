@@ -13,11 +13,15 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 6bcbd4a20a339e94aa02c343398eff4a, type: 2}
     - target: {fileID: 6702594516074743147, guid: ff2b22c06cccba94bb43a5636e6ecd13, type: 3}
       propertyPath: m_Name
-      value: Level Scene
+      value: Level Scene Variant
       objectReference: {fileID: 0}
     - target: {fileID: 6702594516074743147, guid: ff2b22c06cccba94bb43a5636e6ecd13, type: 3}
       propertyPath: m_Layer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6702594516074743147, guid: ff2b22c06cccba94bb43a5636e6ecd13, type: 3}
+      propertyPath: m_TagString
+      value: LSV
       objectReference: {fileID: 0}
     - target: {fileID: 6702594516074743159, guid: ff2b22c06cccba94bb43a5636e6ecd13, type: 3}
       propertyPath: m_RootOrder
