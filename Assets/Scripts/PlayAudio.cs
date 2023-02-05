@@ -5,17 +5,29 @@ using UnityEngine;
 public class PlayAudio : MonoBehaviour
 {
     //public AudioClip myClip;
-    private AudioSource audioSource;
-    bool audioplayed = false;
+    public AudioSource audioSource;
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    //void OnTriggerEnter2D(Collider2D collision)
+    //{
+    //    if (collision.tag == "Player" && !audioSource.isPlaying)
+    //    {
+    //        audioSource.Play();
+    //        //Debug.Log("collide");
+    //        //audioSource = GetComponent<AudioSource>();
+    //        //audioSource.PlayOneShot(audioSource.clip);
+    //        ////audioSource.Play();
+    //    }
+    //}
+
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.tag == "Player" && audioplayed == false)
+        if (collision.gameObject.tag == "Player" && !audioSource.isPlaying)
         {
-            audioSource = this.GetComponent<AudioSource>();
             audioSource.Play();
-            audioplayed = true;
+            Debug.Log("collide");
+            //audioSource = GetComponent<AudioSource>();
+            //audioSource.PlayOneShot(audioSource.clip);
+            ////audioSource.Play();
         }
-       
     }
 }

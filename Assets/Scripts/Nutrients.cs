@@ -69,7 +69,6 @@ public class Nutrients : MonoBehaviour
 
     void UpdateHealthBar()
     {
-        Debug.Log(currentHealth);
         if (useHealthBar)
         {
             float fillAmount = (float)currentHealth / maxHealth;
@@ -142,7 +141,7 @@ public class Nutrients : MonoBehaviour
         sprite.color = Color.blue;
         ChangeBlueMaterial();
 
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(0.5f);
 
         sprite.color = Color.white;
         OGMaterial();
